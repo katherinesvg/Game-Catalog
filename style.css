@@ -1,70 +1,256 @@
 html,
-body {
-    margin: 0;
-    padding: 0;
+body
+{
+font-family: sans-serif;
+margin: 0;
+padding: 0;
 }
 
-.main-header {
-    background-color: rgba(0, 0, 0, .3);
-    padding-bottom: 10px;
+.main-header
+{
+background-color: #9ED8F0;
+padding-bottom: 10px;
 }
 
-.title {
-    text-align: center;
-    margin: 0;
-    font-size: 8em;
-    font-family: "Helvetica";
-    font-weight: normal;
-    color: white;
+.dropdown__menu
+{
+border: 1px solid #eee;
+width: auto;
+transition: all 0.25s;
+position: absolute;
+max-height: 105px;
+overflow: hidden;
+z-index: 1;
+background-color: white;
 }
 
-#card-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
+.dropdown__menu a
+{
+display: block;
+padding: 4px 10px;
+font-size: 16px;
+text-decoration: none;
+color: grey;
+white-space: nowrap;
 }
 
-.card {
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 5px;
+.dropdown__menu a:hover
+{
+background: #eee;
 }
 
-.card-content {
-    padding: 20px;
-    font-family: "Verdana";
-    color: #777;
+.dropdown__button
+{
+background: #4D7A8C;
+color: white;
+border: none;
+padding: 5px;
+width: 120px;
+border-radius: 10px;
+cursor: pointer;
 }
 
-.card-content h2 {
-    margin-top: 0;
-    font-size: 20px;
+.dropdown__button:hover
+{
+background-color: #333;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
+.hide
+{
+max-height: 0;
+opacity: 0%;
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, .3);
-    padding: 10px;
+.title
+{
+text-align: center;
+margin: 0;
+font-size: 8rem;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+color: transparent;
+background-image: linear-gradient(to top, #2F5361, #4E869D);
+-webkit-background-clip: text;
+background-clip: text;
 }
 
-button {
-    text-align: center;
-    background-color: #666;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 40px;
-    border-radius: 10px;
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
-    margin: 5px;
+.prev-button
+{
+float: left;
+}
+
+.next-button
+{
+float: right;
+}
+
+.card-content img
+{
+max-width: 100%;
+height: auto;
+}
+
+#card-container
+{
+display: flex;
+justify-content: center;
+margin: 20px;
+}
+
+.card
+{
+width: 300px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+margin: 5px;
+}
+
+.card-content
+{
+position: relative;
+padding: 20px;
+font-family: "Verdana";
+color: #777;
+}
+
+.image-container
+{
+position: relative;
+width: 100%;
+text-align: center;
+}
+
+.arrow-container
+{
+position: absolute;
+bottom: -22px;
+left: 0;
+right: 0;
+text-align: center;
+}
+
+.prev-button, .next-button
+{
+background: none;
+border: none;
+cursor: pointer;
+font-size: 24px;
+color: #000;
+}
+
+.card-content h2
+{
+margin-top: 0;
+font-size: 20px;
+}
+
+.card img
+{
+width: 100%;
+height: auto;
+}
+
+.footer
+{
+display: flex;
+justify-content: center;
+background-color: #9ED8F0;
+padding: 10px;
+}
+
+.button
+{
+text-align: center;
+background-color: #4D7A8C;
+border: none;
+padding-left: 10px;
+padding-right: 10px;
+height: 40px;
+border-radius: 10px;
+color: white;
+font-size: 22px;
+cursor: pointer;
+margin: 5px;
+}
+
+.button:hover
+{
+background: #333;
+}
+
+.modal
+{
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+overflow: auto;
+background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content
+{
+background-color: #f4f4f4;
+margin: 20% auto;
+width: 70%;
+box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+animation-name: modalopen;
+animation-duration: 1s;
+}
+
+.modal-content img
+{
+max-width: 100%;
+max-height: 200px;
+}
+
+.modal-header h2, .modal-footer h3
+{
+margin: 0;
+}
+
+.modal-header
+{
+background: #5A8A9D;
+padding: 15px;
+color: white;
+
+}
+
+.modal-body
+{
+padding: 10px 20px;
+}
+
+.modal-footer
+{
+background: #5A8A9D;
+padding: 10px;
+color: white;
+text-align: center;
+}
+
+.closeBtn
+{
+color: #ccc;
+float: right;
+font-size: 30px;
+color: white;
+}
+
+.closeBtn:hover,.closeBtn:focus
+{
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+@keyframes modalopen
+{
+from{opacity: 0}
+to {opacity: 1}
 }

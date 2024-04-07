@@ -2,38 +2,62 @@
 <html>
 
 <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles">
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
+<title>Favorite Games | Home</title>
+<meta name="description" content="A Catalog of my top three favorite PC games">
+<link rel="stylesheet" href="style.css" />
+<script type="text/javascript" src="scripts.js"></script>
 </head>
 
 <body>
-    <header class="main-header">
-        <h1 class="title">LA TV Shows</h1>
-    </header>
-    <div id="card-container">
-        
-    </div>
-    <div class="card" style="display: none;">
-        <div class="card-content">
-            <h2>TV Show Title</h2>
-            <img src="" alt="TV Show Poster">
-            <ul>
-                <li>Bullet Point 1</li>
-                <li>Bullet Point 2</li>
-                <li>Bullet Point 3</li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer">
-        <button onclick="quoteAlert();">
-            Get A Quote!
-        </button>
-        <button onclick="removeLastCard();">
-            Remove A Card!
-        </button>
-    </div>
-</body>
+<header class="main-header">
+<h1 class="title">Favorite Games</h1>
+</header>
+<div class="dropdown">
+<button class="dropdown__button">Menu ></button>
+<div class="dropdown__menu hide">
+<a href="#/HOME">Home</a>
+<a href="#/FFXIV">Final Fantasy XIV</a>
+<a href="#/Genshin">Genshin Impact</a>
+<a href="#/LOL">League of Legends</a>
+</div>
+</div>
+<div id="card-container">
+</div>
 
+<div class="card" style="display: none;">
+<div class="card-content">
+<h2>Game Title</h2>
+<div class="image-container">
+<img src="" alt="Game Poster">
+<div class="arrow-container">
+<button class="prev-button">&lt;</button>
+<button class="next-button">&gt;</button>
+</div>
+</div>
+<ul>
+<li>Bullet Point 1</li>
+<li>Bullet Point 2</li>
+<li>Bullet Point 3</li>
+</ul>
+</div>
+</div>
+<div class="footer">
+<button id="modalBtn" class="button">Click for random game quote</button>
+<div id="simpleModal" class="modal">
+<div class="modal-content">
+<span class="closeBtn">&times;</span>
+<div class="modal-header">
+<h2>Random Game Quote</h2>
+</div>
+<div class="modal-body">
+<p id="quoteText">A Game Quote</p>
+<img id="quoteImage" src="https" alt="Random Quote Image">
+</div>
+<div class="modal-footer">
+<h3></h3>
+</div>
+</div>
+</div>
+</div>
+</body>
 </html>
