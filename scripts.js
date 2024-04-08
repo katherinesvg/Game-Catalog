@@ -84,7 +84,7 @@ bulletPoints:
 [
 "From Riot Games",
 "Top MOBA game in the world",
-"Over 150 differemt champions to play from"
+"Over 150 different champions to play from"
 ]
 }
 ];
