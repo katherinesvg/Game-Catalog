@@ -236,7 +236,8 @@ modalBtn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
 window.addEventListener('click', clickOutside);
 
-function openModal(){
+function openModal()
+{
 const randomIndex = Math.floor(Math.random() * 3);
 
 const randomQuote = randomContent[randomIndex];
@@ -249,11 +250,13 @@ modalContent.querySelector('.modal-body img').src = imageURL;
 modal.style.display = 'block';
 }
 
-function closeModal(){
+function closeModal()
+{
 modal.style.display = 'none';
 }
 
-function clickOutside(e){
+function clickOutside(e)
+{
 if(e.target == modal){
 modal.style.display = 'none';
 }
